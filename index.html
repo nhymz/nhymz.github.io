@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       /* Your CSS code goes here */
+
+
       body {
         background-color: #000;
         overflow: hidden;
       }
+
       #bg-video {
         position: fixed;
         right: 0;
@@ -18,6 +21,49 @@
         min-height: 100%;
         z-index: -1;
       }
+
+  
+      h1 {
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        margin: 0 10px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #333;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .explosion {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-image: url('explosion.png');
+        background-size: contain;
+        animation: explosion 0.5s ease-out;
+      }
+      @keyframes explosion {
+        0% {
+          transform: scale(0);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+    
     </style>
   </head>
   <body>
