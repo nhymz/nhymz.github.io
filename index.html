@@ -11,6 +11,7 @@
       body {
         background-color: #000;
         overflow: hidden;
+	  transition: opacity 1s ease-in-out;
       }
 
       #bg-video {
@@ -63,7 +64,19 @@
           opacity: 0;
         }
       }
-    
+         #fade-out {
+        opacity: 1;
+      }
+      #fade-out.fade {
+        opacity: 0;
+      }
+      #press-me {
+        background-color: yellow;
+        color: red;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     </style>
 
 <script>
@@ -97,16 +110,30 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <!-- Your main content goes here -->
+  
+       <main id="fade-out">
+      <p>This is some sample text that will fade away when you click the button.</p>
+      <p>Click the button below to make it happen!</p>
+      <button id="press-me">Press Me!</button>
+
     </main>
-    <footer>
-      <p>&copy; 2023 My Website</p>
-    </footer>
+
     <script>
       // Your JavaScript code goes here
       const bgVideo = document.getElementById('bg-video');
       bgVideo.play();
     </script>
+    <script>
+      // Your JavaScript code goes here
+      const pressMeButton = document.getElementById('press-me');
+      const fadeOutContent = document.getElementById('fade-out');
+
+      pressMeButton.addEventListener('click', () => {
+        fadeOutContent.classList.add('fade');
+      });
+    </script>
   </body>
+    <footer>
+      <p>&copy; 2023 NIGEL SMITH AND CHRIS DINGWELL AND FIFI LOL LTD</p>
+    </footer>
 </html>
