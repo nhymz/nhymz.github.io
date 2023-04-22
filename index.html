@@ -65,6 +65,20 @@
       }
     
     </style>
+
+<script>
+   
+      document.addEventListener('click', function(event) {
+        const explosion = document.createElement('div');
+        explosion.className = 'explosion';
+        explosion.style.left = event.pageX - 50 + 'px';
+        explosion.style.top = event.pageY - 50 + 'px';
+        document.body.appendChild(explosion);
+        setTimeout(function() {
+          explosion.remove();
+        }, 500);
+      });
+    </script>
   </head>
   <body>
     <video id="bg-video" autoplay muted loop>
